@@ -9,4 +9,4 @@ select
 	search_date,
 	search_term
 from '../data/raw/raw_job_postings_*.parquet'
-where error is null;
+where error is null
