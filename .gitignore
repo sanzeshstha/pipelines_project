@@ -17,3 +17,6 @@ data/
 #log file
 log/
 logs/
+
+# DBT generated files
+.user.yml
