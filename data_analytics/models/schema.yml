@@ -50,3 +50,19 @@ models:
         description: Posting location; the grain.
       - name: postings
         description: Postings counted for the location.
+  
+  - name: monthly_summary
+    description: Monthly summary of remote job postings
+    config:
+      persist_docs:
+        relation: true
+        columns : true
+    columns:
+      - name: month
+        description: Posting month, truncated from search_date.
+      - name: total_postings
+        description: Total postings for each month (summed from postings from jobs_per_month model).
+      - name: remote_postings
+        description: Postings flagged as remote each month.
+      - name: pct_remote_postings
+        description: Percentage of remote posting each month.
